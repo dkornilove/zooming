@@ -501,11 +501,12 @@ var target = {
     var windowCenter = getWindowCenter();
     var dx = windowCenter.x - x,
         dy = windowCenter.y - y;
+    var translateScale = this.instance.options.translateScale;
 
 
     setStyle(this.el, {
       cursor: cursor.move,
-      transform: 'translate3d(\n        ' + (this.translate.x + dx) + 'px, ' + (this.translate.y + dy) + 'px, ' + TRANSLATE_Z + 'px)\n        scale(' + (this.scale.x + scaleExtra) + ',' + (this.scale.y + scaleExtra) + ')'
+      transform: 'translate3d(\n        ' + Math.round((this.translate.x + dx) * translateScale) + 'px, ' + Math.round((this.translate.y + dy) * translateScale) + 'px, ' + TRANSLATE_Z + 'px)\n        scale(' + (this.scale.x + scaleExtra) + ',' + (this.scale.y + scaleExtra) + ')'
     });
   },
   move: function move(x, y, scaleExtra) {

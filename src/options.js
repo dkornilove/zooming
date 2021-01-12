@@ -56,6 +56,12 @@ export default {
   scaleExtra: 0.5,
 
   /**
+   * The additional scale factor for translate.
+   * @type {number}
+   */
+  translateScale: 1,
+
+  /**
    * How much scrolling it takes before closing out.
    * @type {number}
    */

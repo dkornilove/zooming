@@ -73,12 +73,13 @@ export default {
   move(x, y, scaleExtra) {
     const windowCenter = getWindowCenter()
     const [dx, dy] = [windowCenter.x - x, windowCenter.y - y]
-
+    const { translateScale } = this.instance.options
+    
     setStyle(this.el, {
       transition: 'transform',
       transform: `translate3d(
-        ${this.translate.x + dx}px, ${this.translate.y +
-        dy}px, ${TRANSLATE_Z}px)
+        ${Math.round((this.translate.x + dx) * translateScale)}px, ${
+          Math.round((this.translate.y + dy) * translateScale)}px, ${TRANSLATE_Z}px)
         scale(${this.scale.x + scaleExtra},${this.scale.y + scaleExtra})`
     })
   },

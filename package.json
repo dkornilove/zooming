@@ -1,13 +1,14 @@
 {
-  "name": "zooming",
-  "version": "2.1.1",
+  "name": "@norzqq/zooming",
+  "version": "2.1.2",
   "description": "Image zoom that makes sense.",
   "main": "build/zooming.js",
   "module": "build/zooming.module.js",
   "jsnext:main": "build/zooming.module.js",
+  "author": "Dmitry Kornilov",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kingdido999/zooming.git"
+    "url": "git+ssh://git@github.com/dkornilove/zooming.git"
   },
   "keywords": [
     "zoom",
@@ -22,12 +23,7 @@
     "test:open": "cypress open",
     "docs": "docsify serve ./docs"
   },
-  "author": "Desmond Ding <info@desmonding.me>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kingdido999/zooming/issues"
-  },
-  "homepage": "https://kingdido999.github.io/zooming",
   "devDependencies": {
     "babel-core": "6.26.3",
     "babel-plugin-transform-object-assign": "6.22.0",
@@ -57,5 +53,14 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dkornilove/zooming/issues"
+  },
+  "homepage": "https://github.com/dkornilove/zooming#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "dependencies": {}
 }

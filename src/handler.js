@@ -1,6 +1,6 @@
 import { bindAll } from './utils'
 
-const PRESS_DELAY = 200
+const PRESS_DELAY = 50
 
 export default {
   init(instance) {
@@ -104,8 +104,13 @@ export default {
 
   touchmove(e) {
     if (this.released) return
-
-    const { clientX, clientY } = e.touches[0]
+    let { clientX, clientY } = e.touches[0]
+    if(e.touches.length == 2) {
+      const minX = Math.min(e.touches[0].clientX,e.touches[1].clientX);
+      const minY = Math.min(e.touches[0].clientY,e.touches[1].clientY);
+      clientX = minX + Math.round(Math.abs(e.touches[0].clientX - e.touches[1].clientX)/2); 
+      clientY = minY + Math.round(Math.abs(e.touches[0].clientY - e.touches[1].clientY)/2);
+    }
     this.move(clientX, clientY)
   },
 

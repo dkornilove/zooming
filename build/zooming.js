@@ -233,7 +233,7 @@
     onImageLoaded: noop
   };
 
-  var PRESS_DELAY = 50;
+  var PRESS_DELAY = 150;
 
   var handler = {
     init: function init(instance) {

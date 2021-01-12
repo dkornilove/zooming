@@ -1,6 +1,6 @@
 import { bindAll } from './utils'
 
-const PRESS_DELAY = 50
+const PRESS_DELAY = 150
 
 export default {
   init(instance) {
